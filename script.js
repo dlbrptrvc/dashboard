@@ -5,6 +5,10 @@ let body = document.body
 body.style.gridTemplate = "1fr / 300px 1fr"
 body.style.filter = 'invert(0%)'
 
+function checksize() {
+    if (screen.width<500) {ssb.click()}
+}
+
 ssb.addEventListener('click', ()=>{
 
     let x = body.style.gridTemplate
