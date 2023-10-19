@@ -27,7 +27,6 @@ ct.addEventListener('click', ()=>{
     if (x.includes('(0%)')) {
         body.style.filter = "invert(100%)"
         let avts = Array.from(document.querySelectorAll('[class^="avatar"]'))
-        console.log(avts)
         avts.forEach( (item) => {
             item.style.filter = "invert(100%)"
         })
