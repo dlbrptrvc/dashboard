@@ -1,185 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Dashboard</title>
-</head>
-<body onload="checksize()">
-    <div class="sidebar">
-        <div class="logospace">
-            <img class="logoimage" src="images/dandi.svg">
-            <div class="logoname">SEED</div>
-        </div>
-        <div class="sbitem"></div>
-        <div class="sbitem">
-            <img src="images/house-chimney.png" alt="" class="sbicon">
-            <div class="sbtext">Home</div>
-        </div>
-        <div class="sbitem">
-            <img src="images/head-side-heart.png" alt="" class="sbicon">
-            <div class="sbtext">Profile</div>
-        </div>
-        <div class="sbitem">
-            <img src="images/envelopes.png" alt="" class="sbicon">
-            <div class="sbtext">Messages</div>
-        </div>
-        <div class="sbitem">
-            <img src="images/clock-five.png" alt="" class="sbicon">
-            <div class="sbtext">History</div>
-        </div>
-        <div class="sbitem">
-            <img src="images/note.png" alt="" class="sbicon">
-            <div class="sbtext">Tasks</div>
-        </div>
-        <div class="sbitem">
-            <img src="images/users-medical.png" alt="" class="sbicon">
-            <div class="sbtext">Communities</div>
-        </div>
-        <div class="sbitem"></div>
-        <div class="sbitem">
-            <img src="images/gears.png" alt="" class="sbicon">
-            <div class="sbtext">Settings</div>
-        </div>
-        <div class="sbitem">
-            <img src="images/user-headset.png" alt="" class="sbicon">
-            <div class="sbtext">Support</div>
-        </div>
-        <div class="sbitem">
-            <img src="images/user-lock.png" alt="" class="sbicon">
-            <div class="sbtext">Privacy</div>
-        </div>
+  </head>
+  <body>
+    <div id="dashboard" class="dashboard">
+      <div class="dtitle">Dashboard</div>
+      <div class="ditem">
+        <div class="dicon"></div>
+        <div class="dtext">Home</div>
+      </div>
+      <div class="ditem">
+        <div class="dicon"></div>
+        <div class="dtext">Profile</div>
+      </div>
+      <div class="ditem">
+        <div class="dicon"></div>
+        <div class="dtext">Messages</div>
+      </div>
+      <div class="ditem">
+        <div class="dicon"></div>
+        <div class="dtext">History</div>
+      </div>
+      <div class="ditem">
+        <div class="dicon"></div>
+        <div class="dtext">Tasks</div>
+      </div>
+      <div class="ditem">
+        <div class="dicon"></div>
+        <div class="dtext">Communities</div>
+      </div>
+      <div class="ditem">
+        <div class="dicon"></div>
+        <div class="dtext">Settings</div>
+      </div>
+      <div class="ditem">
+        <div class="dicon"></div>
+        <div class="dtext">Support</div>
+      </div>
+      <div class="ditem">
+        <div class="dicon"></div>
+        <div class="dtext">Privacy</div>
+      </div>
+      <div id="menuclose" class="btn"></div>
     </div>
     <div class="main">
+      <div class="bar">
         <div class="bar1">
-            <div class="bar11">
-                <img class="bicon" id="slidesb" src="images/chart-simple-horizontal.png" alt="">
-                <img class="bicon" id="changetheme" src="images/sun.png" alt="">
-            </div>
-            <div class="bar12">
-                <img class="bicon"  src="images/search.png">
-                <input class="search" type="text">
-            </div>
-            <div class="bar13">
-                <img class="bicon" src="images/bell-ring.png">
-                <img class="avatarsmall" src="images/3551739.png">
-                <div class="username">Jane Doe</div>
-            </div>
+          <div id="searchbtn" class="btn"></div>
+          <input type="text" />
         </div>
         <div class="bar2">
-            <div class="bar21">
-                <img class="avatarlarge" src="images/3551739.png">
-                <div class="welcomemsg">Welcome <b>Jane Doe</b>  @janedoe</div>
-            </div>
-            <div class="bar22">
-                <div class="hbutton">New</div>
-                <div class="hbutton">Upload</div>
-                <div class="hbutton">Share</div>
-            </div>
+          <div id="themebtn" class="btn"></div>
+          <div id="menubtn" class="btn"></div>
+          <div id="bellbtn" class="btn"></div>
+          <div id="avatarsmall"></div>
+          <div id="userinfo" class="usertext"></div>
         </div>
-        <div class="rest1">
-            <div class="pcontainer">
-                <div class="ptitle">My Projects</div>
-                <div class="projects">
-                    <div class="pitem">
-                        <div class="pititle">Something</div>
-                        <div class="pidescription">This is about thet thing. The thing about it. You know. I can talk about it for days still ccan't get enough. Look at me super, super, sexy.</div>
-                        <div class="pibuttons">
-                            <img src="images/eye.png" class="piicons">
-                            <img src="images/star.png" class="piicons">
-                            <img src="images/share.png" class="piicons">
-                        </div>
-                    </div>
-                    <div class="pitem">
-                        <div class="pititle">Something</div>
-                        <div class="pidescription">This is about thet thing. The thing about it. You know. I can talk about it for days still ccan't get enough. Look at me super, super, sexy.</div>
-                        <div class="pibuttons">
-                            <img src="images/eye.png" class="piicons">
-                            <img src="images/star.png" class="piicons">
-                            <img src="images/share.png" class="piicons">
-                        </div>
-                    </div>
-                    <div class="pitem">
-                        <div class="pititle">Something</div>
-                        <div class="pidescription">This is about thet thing. The thing about it. You know. I can talk about it for days still ccan't get enough. Look at me super, super, sexy.</div>
-                        <div class="pibuttons">
-                            <img src="images/eye.png" class="piicons">
-                            <img src="images/star.png" class="piicons">
-                            <img src="images/share.png" class="piicons">
-                        </div>
-                    </div>
-                    <div class="pitem">
-                        <div class="pititle">Something</div>
-                        <div class="pidescription">This is about thet thing. The thing about it. You know. I can talk about it for days still ccan't get enough. Look at me super, super, sexy.</div>
-                        <div class="pibuttons">
-                            <img src="images/eye.png" class="piicons">
-                            <img src="images/star.png" class="piicons">
-                            <img src="images/share.png" class="piicons">
-                        </div>
-                    </div>
-                    <div class="pitem">
-                        <div class="pititle">Something</div>
-                        <div class="pidescription">This is about thet thing. The thing about it. You know. I can talk about it for days still ccan't get enough. Look at me super, super, sexy.</div>
-                        <div class="pibuttons">
-                            <img src="images/eye.png" class="piicons">
-                            <img src="images/star.png" class="piicons">
-                            <img src="images/share.png" class="piicons">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="rest2">
-                <div class="acontainer">
-                    <div class="atitle">Annoucements</div>
-                    <div class="announcements">
-                        <div class="aitem">
-                            <div class="aititle">Urgent!</div>
-                            <div class="aitext">Hurry up. Don't rush me.</div>
-                        </div>
-                        <div class="aitem">
-                            <div class="aititle">Urgent!</div>
-                            <div class="aitext">Hurry up. Don't rush me.</div>
-                        </div>
-                        <div class="aitem">
-                            <div class="aititle">Urgent!</div>
-                            <div class="aitext">Hurry up. Don't rush me.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tcontainer">
-                    <div class="ttitle">Trending</div>
-                    <div class="trending">
-                        <div class="titem">
-                            <img src="images/63457.png" class="avatarsmall">
-                            <div class="ticontent">
-                                <div class="tititle">@scoobydoo</div>
-                                <div class="titext">Zoiks!</div>
-                            </div>
-                        </div>
-                        <div class="titem">
-                            <img src="images/63457.png" class="avatarsmall">
-                            <div class="ticontent">
-                                <div class="tititle">@scoobydoo</div>
-                                <div class="titext">Zoiks!</div>
-                            </div>
-                        </div>
-                        <div class="titem">
-                            <img src="images/63457.png" class="avatarsmall">
-                            <div class="ticontent">
-                                <div class="tititle">@scoobydoo</div>
-                                <div class="titext">Zoiks!</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="bar3">
+          <div id="avatarlarge"></div>
+          <div id="welcomemsg"></div>
         </div>
-        <div class='footer'>dlbrptrvc&copy 
-            <script>
-                document.write(new Date().getFullYear())
-              </script></div>
+        <div class="bar4">
+          <div class="barbtn">New</div>
+          <div class="barbtn">Upload</div>
+          <div class="barbtn">Share</div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="projects">
+          <div class="projectstitle">Your Projects</div>
+          <div class="project">
+            <div class="pcontext">
+              <div class="projecttitle">Project Tiltle</div>
+              <div class="projecttext">
+                About a project. Something, something.
+              </div>
+            </div>
+            <div class="pbuttons">
+              <div class="star pbtn"></div>
+              <div class="eye pbtn"></div>
+              <div class="share pbtn"></div>
+            </div>
+          </div>
+          <div class="project">
+            <div class="pcontext">
+              <div class="projecttitle">Project Tiltle</div>
+              <div class="projecttext">
+                About a project. Something, something.
+              </div>
+            </div>
+            <div class="pbuttons">
+              <div class="star pbtn"></div>
+              <div class="eye pbtn"></div>
+              <div class="share pbtn"></div>
+            </div>
+          </div>
+          <div class="project">
+            <div class="pcontext">
+              <div class="projecttitle">Project Tiltle</div>
+              <div class="projecttext">
+                About a project. Something, something.
+              </div>
+            </div>
+            <div class="pbuttons">
+              <div class="star pbtn"></div>
+              <div class="eye pbtn"></div>
+              <div class="share pbtn"></div>
+            </div>
+          </div>
+          <div class="project">
+            <div class="pcontext">
+              <div class="projecttitle">Project Tiltle</div>
+              <div class="projecttext">
+                About a project. Something, something.
+              </div>
+            </div>
+            <div class="pbuttons">
+              <div class="star pbtn"></div>
+              <div class="eye pbtn"></div>
+              <div class="share pbtn"></div>
+            </div>
+          </div>
+          <div class="project">
+            <div class="pcontext">
+              <div class="projecttitle">Project Tiltle</div>
+              <div class="projecttext">
+                About a project. Something, something.
+              </div>
+            </div>
+            <div class="pbuttons">
+              <div class="star pbtn"></div>
+              <div class="eye pbtn"></div>
+              <div class="share pbtn"></div>
+            </div>
+          </div>
+          <div class="project">
+            <div class="pcontext">
+              <div class="projecttitle">Project Tiltle</div>
+              <div class="projecttext">
+                About a project. Something, something.
+              </div>
+            </div>
+            <div class="pbuttons">
+              <div class="star pbtn"></div>
+              <div class="eye pbtn"></div>
+              <div class="share pbtn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="aandt">
+          <div class="announcements">
+            <div class="announcementstitle">Announcements</div>
+            <div class="announcement">
+              <div class="atitle">Something Happened</div>
+              <div class="atext">
+                Read more about something that happened. More, and more, and
+                more.
+              </div>
+            </div>
+            <div class="announcement">
+              <div class="atitle">Something Happened</div>
+              <div class="atext">
+                Read more about something that happened. More, and more, and
+                more.
+              </div>
+            </div>
+            <div class="announcement">
+              <div class="atitle">Something Happened</div>
+              <div class="atext">
+                Read more about something that happened. More, and more, and
+                more.
+              </div>
+            </div>
+          </div>
+          <div class="trending">
+            <div class="trendingtitle">Trending</div>
+            <div class="trend">
+              <div class="avatarsmall"></div>
+              <div class="trendcontext">
+                <div class="trenduser">@someone</div>
+                <div class="trendtext">I said this and that.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
