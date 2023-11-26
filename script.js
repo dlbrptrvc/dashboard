@@ -11,3 +11,7 @@ Array.from(dashboard.querySelectorAll(".ditem")).forEach((item) => {
     dashboard.classList.toggle("slidout");
   });
 });
+
+Array.from(document.querySelectorAll("*")).forEach((item) => {
+  item.classList.add("theme-a");
+});

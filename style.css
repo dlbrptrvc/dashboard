@@ -2,20 +2,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid black;
+  user-select: none;
+}
+
+.theme-a {
+  --dash-bg-color: #0284c7;
+  --dash-hl-color: #0369a1;
+  --dash-color: white;
+  --main-bg-color: #e0f2fe;
+  --main-color: black;
+  --highlight-color: #fcd34d;
+  --font: Arial, Helvetica, sans-serif;
 }
 
 body {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: minmax(300px, 350px) 3fr;
   grid-template-rows: auto;
-  background-color: gray;
+  background-color: var(--main-bg-color);
+  font-family: var(--font);
 }
 
 #dashboard {
-  background-color: blue;
+  background-color: var(--dash-bg-color);
+  color: var(--dash-color);
   height: max(100vh, 100%);
   position: relative;
+  user-select: none;
+  font-weight: bold;
 }
 
 #menuclose {
@@ -24,9 +38,10 @@ body {
   width: 30px;
   aspect-ratio: 1;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
   display: none;
+  filter: invert(1);
 }
 
 .btn {
@@ -43,7 +58,7 @@ body {
   display: none;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   body {
     grid-template-columns: auto;
   }
@@ -74,6 +89,9 @@ body {
 }
 
 @media (max-width: 600px) {
+  #bar3 {
+    display: none;
+  }
   .bar {
     grid-template-columns: auto;
   }
@@ -88,4 +106,293 @@ body {
 .bar4 {
   display: flex;
   align-items: center;
+}
+
+/* dashboard */
+
+.dtitle {
+  margin-bottom: 25px;
+  padding: 10px 10px 10px 10px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.dtitleicon {
+  filter: invert(1);
+  background-image: url("./images/dandi.svg");
+  width: 40px;
+  aspect-ratio: 1;
+}
+
+.ditem {
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ditem:hover {
+  background-color: var(--dash-hl-color);
+}
+
+.ditem:nth-child(7) {
+  margin-bottom: 20px;
+}
+
+.dicon {
+  width: 25px;
+  aspect-ratio: 1;
+  filter: invert(1);
+  background-size: 25px 25px;
+}
+
+.ditem:nth-child(2) > .dicon {
+  background-image: url("./images/home.png");
+}
+
+.ditem:nth-child(3) > .dicon {
+  background-image: url("./images/profile.png");
+}
+
+.ditem:nth-child(4) > .dicon {
+  background-image: url("./images/messages.png");
+}
+
+.ditem:nth-child(5) > .dicon {
+  background-image: url("./images/history.png");
+}
+
+.ditem:nth-child(6) > .dicon {
+  background-image: url("./images/tasks.png");
+}
+.ditem:nth-child(7) > .dicon {
+  background-image: url("./images/communities.png");
+}
+.ditem:nth-child(8) > .dicon {
+  background-image: url("./images/settings.png");
+}
+.ditem:nth-child(9) > .dicon {
+  background-image: url("./images/support.png");
+}
+.ditem:nth-child(10) > .dicon {
+  background-image: url("./images/privacy.png");
+}
+
+/* bar */
+
+.bar {
+  background-color: var(--dash-color);
+  padding: 5px 5px 5px 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn {
+  width: 25px;
+  aspect-ratio: 1;
+  background-size: 25px 25px;
+}
+#searchbtn {
+  background-image: url("./images/search.png");
+}
+#themebtn {
+  background-image: url("./images/theme.png");
+}
+
+.bar1 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-around;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#searchbar {
+  padding-left: 10px;
+  padding-right: 10px;
+  flex-grow: 1;
+  height: 30px;
+  border: none;
+  background-color: var(--main-bg-color);
+  border-radius: 25px;
+}
+
+#searchbar:focus {
+  outline: none;
+}
+
+#bellbtn {
+  background-image: url("./images/bell.png");
+}
+
+#avatarsmall {
+  background-image: url("./images/johndoe.png");
+  width: 40px;
+  aspect-ratio: 1;
+  background-size: 40px 40px;
+}
+
+.bar2 {
+  justify-content: end;
+  align-items: center;
+  padding: 10px 10px 10px 10px;
+  gap: 10px;
+}
+
+.usertext {
+  font-weight: bold;
+}
+
+.bar4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 20px 20px 20px;
+}
+
+.barbtn {
+  height: 40px;
+  width: 100px;
+  background-color: var(--dash-bg-color);
+  border-radius: 20px;
+  color: var(--dash-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.barbtn:hover {
+  background-color: var(--dash-hl-color);
+}
+
+#avatarlarge {
+  background-image: url("./images/johndoe.png");
+  width: 60px;
+  aspect-ratio: 1;
+  background-size: 60px 60px;
+}
+
+.wtext {
+  font-family: var(--font);
+  font-weight: bold;
+}
+
+.wmessage {
+  font-family: var(--font);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* projects */
+.container {
+  padding: 30px 20px 20px 20px;
+}
+
+.projectstitle,
+.announcementstitle,
+.trendingtitle {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(6, 250px);
+}
+
+.projectitem {
+  border-radius: 10px;
+  padding: 20px 10px 20px 10px;
+  background-color: var(--dash-color);
+  margin: 10px 10px 10px 0px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: grid;
+  grid-template-rows: 50px 150px 50px;
+  border-left: 5px solid var(--highlight-color);
+  max-height: 250px;
+}
+
+.projecttitle {
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.pbuttons {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  justify-self: right;
+}
+.pbtn {
+  width: 20px;
+  aspect-ratio: 1;
+  background-size: 20px 20px;
+  margin: 5px;
+}
+
+.star {
+  background-image: url("./images/star.png");
+}
+.eye {
+  background-image: url("./images/eye.png");
+}
+.share {
+  background-image: url("./images/share.png");
+}
+
+/* announcements */
+
+.ann {
+  margin: 10px 0 0 0;
+  background-color: var(--dash-color);
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+}
+
+.atitle {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.announcement {
+  border-bottom: 1px solid var(--main-color);
+  padding: 10px 0 10px 0;
+}
+
+.announcement:last-child {
+  border-bottom: none;
+}
+
+/* trending */
+
+.trending {
+  margin-top: 20px;
+}
+.tre {
+  margin: 10px 0 0 0;
+  background-color: var(--dash-color);
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+}
+
+.avatarsmall {
+  background-image: url(./images/avatar.png);
+  width: 40px;
+  aspect-ratio: 1;
+  background-size: 40px 40px;
+}
+
+.trend {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.trenduser {
+  font-weight: bold;
 }
